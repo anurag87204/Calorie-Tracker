@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Calorie Tracker</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <title>Calorie Tracker</title>
+    </head>
+
+    <body>
+
+        <!-- Wrapper -->
+        <section class="wrapper">
+            <!-- logo  -->
+            <div class="logo">
+                <div class="logo-wrapper">
+                    <h1>Calorie Tracker</h1>
+                    <!-- Clear Button -->
+                    <button class="clear-all-btn">Clear All</button>
+                </div>
+                <div class="line"></div>
+            </div>
+
+
+            <!-- Total Calories -->
+            <div class="calories">
+                <div class="total-calories">
+                    <h2>Total Calories: </h2><span class="calories-result">0</span>
+                </div>
+                <div class="line"></div>
+                <!-- clear Button -->
+
+
+
+                <!-- Card -->
+                <div class="card">
+                    <div class="card-content">
+                        <!-- Card Input -->
+                        <div class="card-input">
+                            <input type="text" name="Meal" id="meal-input" placeholder="Meal">
+                            <input type="number" name="Calories" id="calorie-input" placeholder="Calories">
+                        </div>
+                        <!-- Add Meal Button -->
+                        <div class="card-button">
+                            <button class="add-meal-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <!-- Settings Button -->
+                        <div class="setting-button">
+                            <button class="edit-btn">Update</button>
+                            <button class="delete-btn">Delete</button>
+                            <button class="back-btn">Back</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- line -->
+                <div class="line"></div>
+                <!-- List - Meal, calorie -->
+                <ul class="item-list">
+
+                    <!-- <li class="collection-item" id="item-0">
+                    <strong>Steak Dinner:</strong> <em>1200 Calories</em>
+                    <a href="#" class="setting">
+                        <i class="edit-item fa-solid fa-gear"></i>
+                    </a>
+                </li>
+                <li class="collection-item" id="item-0">
+                    <strong>Cookie:</strong> <em>200 Calories</em>
+                    <a href="#" class="setting">
+                        <i class="edit-item fa-solid fa-gear"></i>
+                    </a>
+                </li>
+                <li class="collection-item" id="item-0">
+                    <strong>Two Boiled egg:</strong> <em>110 Calories</em>
+                    <a href="#" class="setting">
+                        <i class=" edit-item fa-solid fa-gear"></i>
+                    </a>
+                </li> -->
+                </ul>
+        </section>
+
+        <!-- Script -->
+        <script src="app.js"></script>
+    </body>
+
+    </html>

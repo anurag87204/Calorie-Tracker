@@ -1,0 +1,487 @@
+:root {
+  --white: #fff;
+  --light-grey: #eeeeee;
+  --medium-grey: #d1d1d1;
+  --black: #252525;
+  --pink: #fe3f5a;
+  --orange: #fe8356;
+  --background: #fea956;
+  --gardient: linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+}
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.line {
+  background: var(--light-grey);
+  width: 100%;
+  height: 1px;
+}
+
+::placeholder {
+  color: var(--medium-grey);
+}
+/* Wrapper */
+
+.wrapper {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  max-width: 600px;
+  padding: 30px 10px;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--white);
+  transform: translatey(50px);
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
+}
+
+/* Logo */
+
+.logo {
+  width: 100%;
+  max-width: 500px;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  text-align: center;
+}
+
+.logo h1 {
+  font-size: calc(35 / 16 * 1rem);
+  padding-bottom: 30px;
+  background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Clear Button */
+.clear-all-btn {
+  font-weight: 500;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: none;
+  font-size: 1rem;
+  background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Total Calories*/
+
+.calories {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+.total-calories {
+  display: flex;
+  padding-top: 30px;
+  justify-content: space-between;
+}
+.calories h2 {
+  font-weight: 500;
+  color: var(--pink);
+  padding-bottom: 30px;
+  font-size: calc(22 / 16 * 1rem);
+}
+
+.calories span {
+  font-weight: 500;
+  color: var(--pink);
+  font-size: calc(22 / 16 * 1rem);
+}
+/* Card Input */
+
+.card-input {
+  width: 100%;
+  display: flex;
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+}
+
+.card-input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  margin: 0 20px;
+  max-width: 230px;
+  position: relative;
+  transition: all 0.3s ease;
+  color: var(--black);
+  font-size: calc(18 / 16 * 1rem);
+  border-bottom: 2px solid var(--medium-grey);
+}
+
+.card-input input:focus,
+.card-input input:not(:placeholder-shown) {
+  border-image-slice: 1;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid;
+  border-image-source: var(--gardient);
+}
+
+/* Add Meal Button */
+
+.card-button {
+  text-align: center;
+}
+.card-button button {
+  border: none;
+  width: 100px;
+  padding: 5px;
+  margin: 20px 0 35px 0;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  background: var(--gardient);
+  font-size: calc(20 / 16 * 1rem);
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
+}
+
+.card-button button i {
+  color: var(--white);
+}
+
+/* Setting Buttons */
+
+.setting-button {
+  display: flex;
+  justify-content: center;
+}
+
+.setting-button button {
+  border: none;
+  width: 100px;
+  padding: 7px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  margin: 20px 20px 35px 20px;
+  box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.075);
+}
+
+.setting-button .edit-btn,
+.setting-button .back-btn {
+  background: var(--pink);
+}
+
+.setting-button .delete-btn {
+  background: var(--gardient);
+}
+
+.setting-button .back-btn {
+  background: var(--pink);
+}
+
+.setting-button .edit-btn:hover,
+.setting-button .delete-btn:hover,
+.setting-button .back-btn:hover,
+.clear-all-btn:hover .add-meal-btn:hover,
+.add-meal-btn:hover {
+  transform: scale(0.98);
+}
+
+/* Item List (ul) */
+
+.item-list {
+  width: 100%;
+  padding-top: 40px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.item-list .line {
+  margin-bottom: 40px;
+}
+
+.item-list::-webkit-scrollbar {
+  width: 5px;
+}
+.item-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+
+.item-list::-webkit-scrollbar-thumb {
+  background: #e6e6e6;
+  border-radius: 25px;
+}
+.collection-item {
+  text-align: left;
+  position: relative;
+  margin-bottom: 30px;
+  font-size: calc(18 / 16 * 1rem);
+}
+
+.collection-item a {
+  left: 90%;
+  position: absolute;
+}
+
+.collection-item a i {
+  font-size: calc(20 / 16 * 1rem);
+  background: -webkit-linear-gradient(54deg, #fea956 35%, #fe3f67 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.collection-item i:hover {
+  transform: rotate(45deg);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 620px) {
+  /* Wrapper */
+
+  .wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 30px;
+    transform: translatey(50px);
+  }
+
+  /* Logo */
+
+  .logo {
+    max-width: 450px;
+  }
+
+  .logo h1 {
+    font-size: calc(30 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+
+  /* Total Calories*/
+
+  .calories {
+    max-width: 450px;
+  }
+  .calories h2 {
+    font-size: calc(20 / 16 * 1rem);
+  }
+
+  .calories span {
+    font-size: calc(20 / 16 * 1rem);
+  }
+  /* Card Input */
+
+  .card-input input {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  #meal-input {
+    margin-right: 20px;
+  }
+
+  #calorie-input {
+    margin-left: 20px;
+  }
+
+  /* Add Meal Button */
+
+  .card-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 0 35px 0;
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .setting-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 10px 35px 10px;
+    font-size: 1rem;
+  }
+
+  /* Item List (ul) */
+  .item-list::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .item-list .line {
+    margin-bottom: 40px;
+  }
+
+  .collection-item {
+    text-align: left;
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 1rem;
+  }
+
+  .collection-item a {
+    left: 90%;
+    position: absolute;
+  }
+
+  .collection-item a i {
+    font-size: calc(18 / 16 * 1rem);
+  }
+}
+
+@media (max-width: 460px) {
+  /* Wrapper */
+  .wrapper {
+    max-width: 400px;
+  }
+
+  /* Logo */
+
+  .logo h1 {
+    font-size: calc(28 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 415px) {
+  /* Wrapper */
+
+  .wrapper {
+    padding: 25px;
+    max-width: 360px;
+  }
+
+  /* Logo */
+
+  .logo h1 {
+    font-size: calc(22 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+
+  /* Total Calories*/
+
+  .calories h2 {
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .calories span {
+    font-size: calc(18 / 16 * 1rem);
+  }
+  /* Card Input */
+
+  .card-input input {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  #meal-input {
+    margin-right: 10px;
+  }
+
+  #calorie-input {
+    margin-left: 10px;
+  }
+
+  /* Add Meal Button */
+
+  .card-button button {
+    width: 80px;
+    padding: 5px;
+    margin: 0 0 30px 0;
+    font-size: calc(14 / 16 * 1rem);
+  }
+
+  .setting-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 10px 30px 10px;
+    font-size: calc(13 / 16 * 1rem);
+  }
+}
+
+@media (max-width: 380px) {
+  /* Wrapper */
+
+  .wrapper {
+    padding: 25px;
+    max-width: 345px;
+  }
+
+  /* Logo */
+
+  .logo h1 {
+    font-size: calc(22 / 16 * 1rem);
+    padding-bottom: 30px;
+  }
+
+  /* Total Calories*/
+
+  .calories h2 {
+    font-size: calc(18 / 16 * 1rem);
+  }
+
+  .calories span {
+    font-size: calc(18 / 16 * 1rem);
+  }
+  /* Card Input */
+
+  .card-input input {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  #meal-input {
+    margin-right: 10px;
+  }
+
+  #calorie-input {
+    margin-left: 10px;
+  }
+
+  /* Add Meal Button */
+
+  .card-button button {
+    width: 80px;
+    padding: 5px;
+    margin: 0 0 30px 0;
+    font-size: calc(14 / 16 * 1rem);
+  }
+
+  .setting-button button {
+    width: 100px;
+    padding: 5px;
+    margin: 0 10px 30px 10px;
+    font-size: calc(13 / 16 * 1rem);
+  }
+}
